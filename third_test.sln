@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSA", "OSA.csproj", "{038D789A-2473-D480-7B0A-D66170E29D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSA-Editor", "OSA-Editor.csproj", "{CCD57999-2EF0-F9D7-BDD2-E108718BCA6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{038D789A-2473-D480-7B0A-D66170E29D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038D789A-2473-D480-7B0A-D66170E29D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038D789A-2473-D480-7B0A-D66170E29D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038D789A-2473-D480-7B0A-D66170E29D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD57999-2EF0-F9D7-BDD2-E108718BCA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD57999-2EF0-F9D7-BDD2-E108718BCA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD57999-2EF0-F9D7-BDD2-E108718BCA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD57999-2EF0-F9D7-BDD2-E108718BCA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
