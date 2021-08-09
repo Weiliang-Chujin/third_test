@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - startpanel
+  - toppanel
+  - controlbtn
+  - controlText
   layers:
   - Default
   - TransparentFX
