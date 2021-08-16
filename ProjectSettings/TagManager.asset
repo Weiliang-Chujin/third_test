@@ -8,6 +8,12 @@ TagManager:
   - toppanel
   - controlbtn
   - controlText
+  - uid_1
+  - nickName_1
+  - levelImage_1
+  - trophy_1
+  - TimeText
+  - popupWindow
   layers:
   - Default
   - TransparentFX

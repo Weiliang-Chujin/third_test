@@ -58,10 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BasicListAdapter.cs" />
-     <Compile Include="Assets\Scripts\Control.cs" />
-     <Compile Include="Assets\Scripts\Popup.cs" />
-     <Compile Include="Assets\Scripts\SimpleJSON.cs" />
+     <Compile Include="Assets\Scripts\Config\JsonReader.cs" />
+     <Compile Include="Assets\Scripts\Controller\BasicListAdapter.cs" />
+     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
+     <Compile Include="Assets\Scripts\Controller\PopupWindowController.cs" />
+     <Compile Include="Assets\Scripts\Controller\RankItemController.cs" />
+     <Compile Include="Assets\Scripts\Data\MyListItemViewsHolder.cs" />
+     <Compile Include="Assets\Scripts\Data\RankData.cs" />
+     <Compile Include="Assets\ThirdParty\SimpleJSON.cs" />
      <None Include="Assets\ThirdParty\OSA\Resources\OSA\Templates\ScriptsChunks\HeaderComment.txt" />
      <None Include="Assets\ThirdParty\OSA\Resources\OSA\Templates\Scripts\BasicListAdapter.txt" />
      <None Include="Assets\ThirdParty\OSA\Resources\OSA\Templates\Scripts\BasicGridAdapter.txt" />
