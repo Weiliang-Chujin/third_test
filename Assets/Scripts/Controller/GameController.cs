@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     }
 
     //点击控制排行榜显示或关闭
-    public void ControlGame()
+    private void ControlGame()
     {
         if (controlText.text == "Close")
         {
