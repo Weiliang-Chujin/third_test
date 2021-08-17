@@ -19,12 +19,12 @@ public class PopupWindowController : MonoBehaviour
     void Start()
     {
         popupWindow.SetActive(false);
-        popupShowBtn.onClick.AddListener(PopupShow);
-        popupCloseBtn.onClick.AddListener(PopupClose);
+        popupShowBtn.onClick.AddListener(ShowPopupWindow);
+        popupCloseBtn.onClick.AddListener(ClosePopupWindow);
     }
 
     //显示信息弹窗，更新个人信息展示
-    public void PopupShow()
+    public void ShowPopupWindow()
     {
         StringBuilder stringBuilder = new StringBuilder();
         popupWindow.SetActive(true);
@@ -37,7 +37,7 @@ public class PopupWindowController : MonoBehaviour
     }
     
     //关闭信息弹窗
-    public void PopupClose()
+    public void ClosePopupWindow()
     {
         popupWindow.SetActive(false);
     }
