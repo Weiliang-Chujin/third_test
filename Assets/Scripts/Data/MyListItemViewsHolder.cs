@@ -11,9 +11,7 @@ using UnityEngine;
 public class MyListItemViewsHolder : BaseItemViewsHolder
 {
     public Image backgroundImage; //背景图片
-    public Image rankFirstImage; //第一名图片
-    public Image rankSecondImage; //第二名图片
-    public Image rankThirdImage; //第三名图片
+    public Image rankImage; //排名图片
     public Text rankText; //排名文字
     public Image avatar; //头像图片
     public Text uid; //玩家id文字
@@ -28,9 +26,7 @@ public class MyListItemViewsHolder : BaseItemViewsHolder
 			
         //获取BasicListAdapterItem下的组件
         root.GetComponentAtPath("BackgroundImage", out backgroundImage);
-        root.GetComponentAtPath("RankFirstImage", out rankFirstImage);
-        root.GetComponentAtPath("RankSecondImage", out rankSecondImage);
-        root.GetComponentAtPath("RankThirdImage", out rankThirdImage);
+        root.GetComponentAtPath("RankImage", out rankImage);
         root.GetComponentAtPath("RankText", out rankText);
         root.GetComponentAtPath("Avatar", out avatar);
         root.GetComponentAtPath("Uid", out uid);
