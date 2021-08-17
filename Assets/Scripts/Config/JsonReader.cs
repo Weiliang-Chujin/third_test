@@ -7,45 +7,50 @@ using UnityEngine;
 /*
  * json数据读取类，读取排行榜数据
  */
-public class JsonReader : MonoBehaviour
+public class JsonReader 
 {
-    public RankData[] rankData; //排行榜数据
-
-    private void Awake()
-    {
-        ReadJson();
-    }
-
-    public JSONNode ReadJson()
-    {
-        //读取数据
+    //解析json数据
+    public static JSONNode ReadJson()
+    { 
         TextAsset txtobj = (TextAsset)Resources.Load("Json/ranklist");
         JSONNode json = JSONNode.Parse(txtobj.text);
-
-        JSONNode data = json["list"];
-        rankData = new RankData[data.Count];
-        for (int i = 0; i < data.Count; i++)
+        return json;
+    }
+    
+    //获取倒计时数据
+    public static int ReadCountdown()
+    {
+        return ReadJson()["countDown"];
+    }
+    
+    //获取排行榜数据并排序
+    public static RankData[] ReadRankData()
+    {
+        JSONNode jsonRankData = ReadJson()["list"];
+        RankData[] rankData = new RankData[jsonRankData.Count];
+        for (int i = 0; i < jsonRankData.Count; i++)
         {
             var model = new RankData()
             {
-                uid = data[i]["uid"],
-                nickName = data[i]["nickName"],
-                avatar = data[i]["avatar"],
-                trophy = data[i]["trophy"],
-                thirdAvatar = data[i]["thirdAvatar"],
-                onlineStatus = data[i]["onlineStatus"],
-                role = data[i]["role"],
-                abb = data[i]["abb"]
+                uid = jsonRankData[i]["uid"],
+                nickName = jsonRankData[i]["nickName"],
+                avatar = jsonRankData[i]["avatar"],
+                trophy = jsonRankData[i]["trophy"],
+                thirdAvatar = jsonRankData[i]["thirdAvatar"],
+                onlineStatus = jsonRankData[i]["onlineStatus"],
+                role = jsonRankData[i]["role"],
+                abb = jsonRankData[i]["abb"]
             };
             rankData[i] = model;
         }
-			
+        
         //根据奖杯数降序排序
         Array.Sort(rankData, (x, y) =>
         { 
             return y.trophy - x.trophy;
         });
 
-        return json;
+        return rankData;
     }
+    
 }

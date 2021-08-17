@@ -34,7 +34,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		{
 			Data = new SimpleDataHelper<RankData>(this);
 
-			totalTime = jsonRead.ReadJson()["countDown"];
+			totalTime = JsonReader.ReadCountdown();
 			
 			base.Awake();
 			StartCoroutine(updateCountdown());
@@ -117,7 +117,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		{
 			yield return new WaitForSeconds(.5f);
 
-			OnDataRetrieved(jsonRead.rankData);
+			OnDataRetrieved(JsonReader.ReadRankData());
 		}
 
 		void OnDataRetrieved(RankData[] newItems)
