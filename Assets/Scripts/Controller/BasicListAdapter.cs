@@ -20,7 +20,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		public SimpleDataHelper<RankData> Data { get; private set; }
 		public Text timeText; //倒计时文字
 		public JsonReader jsonRead; //json读取类
-		public RankItemController rankItemController; //排行榜item控制
+		public RankItemView rankItemView; //排行榜item视图
 		
 		private int totalTime; //距离赛季刷新的时间，单位秒
 		private int day; //天数
@@ -85,7 +85,7 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts.Lists
 		
 		protected override void UpdateViewsHolder(MyListItemViewsHolder newOrRecycled)
 		{
-			rankItemController.InitializeRankItemInfo(Data, newOrRecycled);
+			rankItemView.InitializeRankItemInfo(Data, newOrRecycled);
 		}
 
 		
